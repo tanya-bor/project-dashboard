@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="side-bar">
+        <button class="burger-btn">☰</button>
+        <div class="period-selector">
+          <h3>Period</h3>
+          <select id="month-select" class="select">
+            <option value="1">Junuary</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+          <select id="year-select" class="select">
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+          </select>
+        </div>
+        <nav class="nav-list">
+          <a href="#" class="nav-item active">Projects</a>
+          <a href="#" class="nav-item">Employees</a>
+        </nav>
+      </aside>
+      <main class="main-section">
+        <div class="projects">
+          <h1>Projects</h1>
+          <div class="project-btn">
+            <button class="add-btn">+ Add Project</button>
+            <button class="add-btn">Seed Data</button>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Company Name</th>
+              <th>Project Name</th>
+              <th>Budget</th>
+              <th>Employee Capacity</th>
+              <th>Employees</th>
+              <th>Estimated Income</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+        </table>
+      </main>
+    </div>
+  </body>
+</html>
