@@ -7,9 +7,10 @@
     <title>Dashboard</title>
   </head>
   <body>
+    <button class="open-button" id="open-button">→</button>
     <div class="wrapper">
-      <aside class="side-bar">
-        <button class="burger-btn">☰</button>
+      <aside class="side-bar" id="side-bar">
+        <button class="burger-btn" id="burger-btn">☰</button>
         <div class="period-selector">
           <h3>Period</h3>
           <select id="month-select" class="select">
@@ -38,27 +39,108 @@
         </nav>
       </aside>
       <main class="main-section">
-        <div class="projects">
-          <h1>Projects</h1>
-          <div class="project-btn">
-            <button class="add-btn">+ Add Project</button>
-            <button class="add-btn">Seed Data</button>
+        <div class="project-content">
+          <div class="project-content-header">
+            <h1>Projects</h1>
+            <div class="project-btn">
+              <button class="add-btn">+ Add Project</button>
+              <button class="add-btn">Seed Data</button>
+            </div>
           </div>
         </div>
         <table>
           <thead>
             <tr>
-              <th>Company Name</th>
-              <th>Project Name</th>
-              <th>Budget</th>
-              <th>Employee Capacity</th>
+              <th class="sortable filterable">
+                Company Name
+                <span class="sort-icon">⇅</span>
+                <span class="filter-icon">⌕</span>
+              </th>
+              <th class="sortable filterable">
+                Project Name
+                <span class="sort-icon">⇅</span>
+                <span class="filter-icon">⌕</span>
+              </th>
+              <th class="sortable">
+                Budget
+                <span class="sort-icon">⇅</span>
+              </th>
+              <th class="sortable">
+                Employee Capacity
+                <span class="sort-icon">⇅</span>
+              </th>
               <th>Employees</th>
-              <th>Estimated Income</th>
+              <th class="sortable">
+                Estimated Income
+                <span class="sort-icon">⇅</span>
+              </th>
               <th>Actions</th>
             </tr>
           </thead>
+          <tbody>
+            <tr>
+              <td>DataViz Inc</td>
+              <td>Analytics Dashboard</td>
+              <td>$7900.00</td>
+              <td><span>1.0/1</span></td>
+              <td>
+                <button class="show-details-btn">Show Employees (1)</button>
+              </td>
+              <td class="negative-income">$-1250.00</td>
+              <td>
+                <button class="delete-btn delete-project">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>TechCorp</td>
+              <td>Mobile Banking App</td>
+              <td>$16650.00</td>
+              <td><span>1.9/2</span></td>
+              <td>
+                <button class="show-details-btn">Show Employees (2)</button>
+              </td>
+              <td class="positive-income">$2767.50</td>
+              <td>
+                <button class="delete-btn delete-project">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>SalesPro</td>
+              <td>CRM System</td>
+              <td>$10000.00</td>
+              <td><span>1.4/2</span></td>
+              <td>
+                <button class="show-details-btn">Show Employees (3)</button>
+              </td>
+              <td class="negative-income">$-775.00</td>
+              <td>
+                <button class="delete-btn delete-project">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>TechCorp</td>
+              <td>E-Commerce Platform</td>
+              <td>$12500.00</td>
+              <td><span>2.4/3</span></td>
+              <td>
+                <button class="show-details-btn">Show Employees (3)</button>
+              </td>
+              <td class="negative-income">$-7545.00</td>
+              <td>
+                <button class="delete-btn delete-project">Delete</button>
+              </td>
+            </tr>
+          </tbody>
         </table>
+        <div class="total-income-info">
+          <strong>Total Estimated Income:</strong>
+          <span class="total-amount negative-income">$-27727.50</span>
+          <span style="color: #7f8c8d; font-size: 0.9em"
+            >(Bench payments: $20925.00)</span
+          >
+        </div>
       </main>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
