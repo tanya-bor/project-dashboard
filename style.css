@@ -565,3 +565,12 @@ p {
   border-radius: 4px;
   transition: background-color 0.3s;
 }
+
+/* employees paje */
+
+.employees-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
